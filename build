@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+docker build  -t 'docker_pipe_tests' .
+
+docker rm -f docker_pipe_tests_storage
+docker create -v $(pwd)/scripts:/scripts/ -v /scripts --name docker_pipe_tests_storage docker_pipe_tests
+

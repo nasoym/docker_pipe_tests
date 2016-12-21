@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo -e "abc\ndef\n" \
+  | docker run -i --rm -a stdin -a stdout --volumes-from docker_pipe_tests_storage docker_pipe_tests
+

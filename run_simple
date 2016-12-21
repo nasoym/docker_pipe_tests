@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo -e "abc\ndef\n" \
+  | docker run -i --rm -a stdin -a stdout docker_pipe_tests
+
